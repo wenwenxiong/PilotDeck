@@ -18,7 +18,7 @@ COPY ui/package.json ui/
 COPY ui/scripts/ ui/scripts/
 
 # Single pnpm install resolves root + workspace (ui) + file dep (edgeclaw-memory-core)
-RUN npm install -g pnpm && HUSKY=0 pnpm install --frozen-lockfile
+RUN npm install -g pnpm@9 && HUSKY=0 pnpm install --frozen-lockfile
 
 # Copy all source files
 COPY src/ src/
